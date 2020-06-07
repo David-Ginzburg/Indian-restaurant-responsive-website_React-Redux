@@ -4,20 +4,19 @@ import { Link } from 'react-router-dom';
 
 	function RenderComments({comments}) {
         if (comments != null) {
-            const comment = comments.map(review => {
+            const commentsList = comments.map(review => {
                 return (
                     <li key = {review.id}>
                         <p>{review.comment}</p> 
                         <p>-- {review.author} , {new Intl.DateTimeFormat("en-US", {year: "numeric", month: "short", day: "2-digit"}).format(new Date(Date.parse(review.date)))}</p>
                     </li>
                 );
-
             });
             return (
 				<React.Fragment>
                     <h4>Comments</h4>
 					<ul className="list-unstyled">
-						{comment}
+						{commentsList}
 					</ul>
 				</React.Fragment>
             );
