@@ -18,7 +18,6 @@ const mapDispatchToProps = dispatch => ({
   resetFeedbackForm: () => { dispatch(actions.reset('feedback'))},
   fetchComments: () => dispatch(fetchComments()),
   fetchPromos: () => dispatch(fetchPromos()),
-  //
   fetchLeaders: () => dispatch(fetchLeaders()),
   postFeedback: (firstname, lastname, telnum, email, agree, contactType, message) => 
     dispatch(postFeedback(firstname, lastname, telnum, email, agree, contactType, message))
@@ -43,7 +42,6 @@ class Main extends Component {
     this.props.fetchDishes();
     this.props.fetchComments();
     this.props.fetchPromos();
-    //
     this.props.fetchLeaders();
   }
 
@@ -57,7 +55,6 @@ class Main extends Component {
           promotion={this.props.promotions.promotions.filter((promo) => promo.featured)[0]}
           promoLoading={this.props.promotions.isLoading}
           promoErrMess={this.props.promotions.errMess}
-          //leader={this.props.leaders.filter((leader) => leader.featured)[0]}
           leader={this.props.leaders.leaders.filter((leader) => leader.featured)[0]}
           leaderLoading={this.props.leaders.isLoading}
           leaderErrMess={this.props.leaders.errMess}
