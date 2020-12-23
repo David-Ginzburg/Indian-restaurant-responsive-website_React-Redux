@@ -1,3 +1,5 @@
+The Hong Kong University of Science and Technology Web-Development and React course
+
 To run project:
 
 1) git clone
