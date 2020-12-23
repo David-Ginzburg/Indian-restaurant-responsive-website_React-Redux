@@ -1,4 +1,5 @@
 The Hong Kong University of Science and Technology Web-Development and React course
+Made with Reactstrap, Redux, React-animation-components and JSON-Server
 
 To run project:
 
